@@ -1,12 +1,12 @@
 const express = require('express');
 const route = express.Router();
 
-const TodoSchema = require('../models/todoSchema');
+const TodoModel = require('../models/todoModel');
 
 // read
 route.get('/todos', (req, res) => {
     // res.send("The todos are on the way to do")
-    TodoSchema.find((err, todos) => {
+    TodoModel.find((err, todos) => {
         if (err) {
             console.log(err);
             res.json({ msg: 'Failed to load your Todos', err });
@@ -22,11 +22,11 @@ route.post('/todo', (req, res) => {
     console.log(req.body);
     const { title, task, completed = false, theme = '#ffffff', deleted = false, pinned = false } = req.body;
 
-    const newTodo = new TodoSchema({
+    const newTodo = new TodoModel({
         title, task, completed, theme, deleted, pinned
     })
 
-    newTodo.save((err, todo) => {
+    newTodo.save((err) => {
         if (err) {
             console.log("error");
             res.json({ msg: 'Failed to create your Todo', err });
@@ -40,7 +40,7 @@ route.post('/todo', (req, res) => {
 // delete by Id
 route.delete('/todo/:id', (req, res) => {
     // res.send("Todo is deleted")
-    TodoSchema.deleteOne({ _id: req.params.id }, (err, todo) => {
+    TodoModel.deleteOne({ _id: req.params.id }, (err, todo) => {
         if (err) {
             res.json({ msg: 'Failed to delete your Todo', err });
         } else {

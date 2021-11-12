@@ -6,13 +6,13 @@
     "start" : "node server.js",
     "dev"   : "nodemon server.js"
 
-> dependencies : [`express`](https://www.npmjs.com/package/express), [`mongoose`](https://www.npmjs.com/package/mongoose)
+> dependencies : [`express`](https://www.npmjs.com/package/express), [`mongoose`](https://www.npmjs.com/package/mongoose), `cors`, `jsonwebtokens`, `bcryptjs`
 
 > devDependencies : `nodemon`
 
 > Tools used : [`vscode`](https://code.visualstudio.com/), [`postman`](https://www.getpostman.com/), [`Git Bash`](https://git-scm.com/), [`Brave Browser`](https://brave.com/)
 
-> Resources : [`angular`](https://devdocs.io/angular/),[`mongoose`](https://devdocs.io/mongoose/)
+> Resources : [`angular`](https://devdocs.io/angular/), [`mongoose`](https://devdocs.io/mongoose/)
 
 
 > Checklist : 
@@ -21,7 +21,9 @@
       
 - [x] added boilerplate using Express
 - [x] added api routes and db models
+- [x] added authentication routes
 - [x] tested api with postman
+- [x] used jwt to authenticate users and manage sessions
 
 > > Client Side :
 
@@ -46,3 +48,12 @@
 > Yet to Learn : 
 - [ ] Folder Strucure for MEAN Stack
  
+> Using Okta 
+
+    okta register
+    
+
+> Delete 
+
+PAT : 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 (workspace)
+

@@ -1,11 +1,14 @@
 
-> Requirements : `node`, `npm`
+### [Angular Material](https://material.angular.io/guide/getting-started)  : 
 
-> Dependencies : `express`, `mongoose`
+> Install
 
-> Devdependencies : 
+    ng add @angular/material
+
+> Theme : [`indigo-pink`](https://material.angular.io/?theme=indigo-pink)
 
 
+    ng add
 
 
 
